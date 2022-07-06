@@ -1,38 +1,167 @@
+@import url("https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
+body {
+    margin: 0;
+    font-family: Galmuri11;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: url("dust4.png"), #121212;
+    background-size: 300px 300px;
+    font-family: Galmuri11;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    max-width: 728px;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App header {
+    background-color: rgb(193, 193, 193);
+    height: 10vh;
+    min-height: 50px;
+    position: fixed;
+    width: 100%;
+    max-width: 728px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App header h1 {
+    margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App header button {
+    margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(219, 219, 219);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+    padding: 10px;
+    height: 80vh;
+    margin: 10vh 0 10vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #303032;
+}
+
+form {
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(193, 193, 193);
+    width: 100%;
+    max-width: 728px;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+form button {
+    font-family: Galmuri11;
+    width: 20%;
+    background-color: #303032;
+}
+
+input {
+    margin: 20px;
+    font-family: Galmuri11;
+    width: 100%;
+    font-size: 1.4rem;
+    background: rgb(193, 193, 193);
+    outline: none;
+    border: none;
+    padding: 0 10px;
+}
+
+button {
+    font-family: Galmuri11;
+    background-color: #303032;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sign-in {
+    font-family: Galmuri11;
+    color: #ffffff;
+    background-color: #303032;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+ul,
+li {
+    text-align: left;
+    list-style: none;
+}
+
+p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.sent {
+    flex-direction: row-reverse;
+}
+
+.sent p {
+    color: white;
+    background-color: #303032;
+    align-self: flex-end;
+}
+.received p {
+    background: #b6b6b8;
+    color: black;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    margin: 2px 5px;
+    filter: grayscale(100%);
 }
